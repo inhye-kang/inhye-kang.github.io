@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/uikit.min.css" />
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+    <title>Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Raleway:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Source+Serif+Pro:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="education.html">EDUCATION</a>
+        <a href="experience.html">EXPERIENCE</a>
+        <a href="projects.html">PROJECTS</a>
+        <a href="honors.html">HONORS</a>
+        <a href="#">CONTACT</a>
+    </div>
+    <header class="front">
+        <div id="topnav">
+            <a class="active" href="index.html">INHYE KANG</a>
+            <button class="openbtn" onclick="openNav()">☰</button>
+        </div>
+    
+    </header>
+<div class="content">
+    <div class="projects">
+        <p>COMING SOON...</p>
+    </div>
+</div>
+    <div class="footer">
+        <p class="closing">Inhye Kang 2023</p>
+        <a class="email" href = "mailto: inhye@bu.edu">inhye@bu.edu</a>
+        <p class="link-container">
+            <a href = "https://www.linkedin.com/in/inhyek/" target = "_blank">LINKEDIN</a>
+            <span>   · </span>
+            <a href="https://github.com/inhye-kang" target = "_blank">GITHUB</a>
+        </p>
+        <a href="index.html" class="top">INHYE</a>
+    </div>
+</body>
+<script>
+    window.onscroll = function() {myFunction()};
+
+    var topnav = document.getElementById("topnav");
+    var sticky = topnav.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+        topnav.classList.add("sticky")
+        } else {
+        topnav.classList.remove("sticky");
+        }
+    }
+</script>
+</html>

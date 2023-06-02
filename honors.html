@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Raleway:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Source+Serif+Pro:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="education.html">EDUCATION</a>
+        <a href="experience.html">EXPERIENCE</a>
+        <a href="projects.html">PROJECTS</a>
+        <a href="honors.html">HONORS</a>
+        <a href="#">CONTACT</a>
+    </div>
+
+    <header class="front">
+        <div id="topnav">
+            <a class="active" href="index.html">INHYE KANG</a>
+            <button class="openbtn" onclick="openNav()">☰</button>
+        </div>
+    
+    </header>
+<div class="content">
+    <div class="honors">
+        <h3>HONORS</h3>
+        <table style="width:100%">
+            <tr>
+                <th style="width:25%">TITLE</th>
+                <th style="width:50%">DESCRIPTION</th>
+                <th style="width:25%">DATE</th>
+            </tr>
+            <tr>
+                <td>Team leader at <a href="" target="_blank">HackMIT</a></td>
+                <td>Selected from a highly competitive pool of applicants to attend the 36-hour hackathon. Managed progress of a group of 4 students to ensure completion of an application in the
+                    entertainment track. The application utilized the Spotify and Tinder APIs to allow users to check compatibilities with another user through music.</td>
+                <td>Oct 2022</td>
+            </tr>
+            <tr>
+                <td><a href="https://www.kasf.org/" target="_blank">Korean American Scholarship Foundation</a> Scholarship Recipient</td>
+                <td>One of the four high school students selected from 300 students to receive the merit scholarship for the 2020 cycle.</td>
+                <td>Aug 2020</td>
+            </tr>
+            <tr>
+                <td><a href="https://mathprize.atfoundation.org/" target = "_blank">Jane Street/MIT Math Prize for Girls</a> Alumni</td>
+                <td>Competed as one of the 250 students from the United States and Canada. Currently volunteering as a alumni proctor for the annual competition.</td>
+                <td>Oct 2019, 2018</td>
+            </tr>
+            <tr>
+                <td><a href="https://www.maa.org/math-competitions/american-invitational-mathematics-examination-aime" target="_blank">AIME</a> Invitee</td>
+                <td>Qualified for the American Invitational Mathematics Examination(USA Math Olympiad preliminary competition)</td>
+                <td>2019, 2018</td>
+            </tr>
+            <tr>
+                <td><a href="https://www.maa.org/math-competitions/amc-1012" target="_blank">AMC 10 </a>Honor Roll</td>
+                <td>Ranked in the top 2.5% internationally</td>
+                <td>2019, 2018</td>
+            </tr>
+            <tr>
+                <td>11th in the US, 8th in MA for <a href="https://mathkangaroo.org/mks/" target="_blank"> Math Kangaroo</a></td>
+                <td>Issued by Wolfram Research</td>
+                <td>2017</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+    <div class="footer">
+        <p class="closing">Inhye Kang 2023</p>
+        <a class="email" href = "mailto: inhye@bu.edu">inhye@bu.edu</a>
+        <p class="link-container">
+            <a href = "https://www.linkedin.com/in/inhyek/" target = "_blank">LINKEDIN</a>
+            <span>   · </span>
+            <a href="https://github.com/inhye-kang" target = "_blank">GITHUB</a>
+        </p>
+        <a href="index.html" class="top">INHYE</a>
+    </div>
+</body>
+<script>
+    window.onscroll = function() {myFunction()};
+
+    var topnav = document.getElementById("topnav");
+    var sticky = topnav.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+        topnav.classList.add("sticky")
+        } else {
+        topnav.classList.remove("sticky");
+        }
+    }
+</script>
+</html>
