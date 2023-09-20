@@ -80,7 +80,7 @@
     background-color: white;
     color: black;
   }
-    
+  
   .openbtn {
       font-size: 30px;
       cursor: pointer;
@@ -173,6 +173,7 @@
 .about-content p{
   grid-column: 2;
 }
+
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
@@ -288,12 +289,12 @@ table {
     margin: 40px 20px;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     gap: 30px;
-    
+    padding-top: 16px;
   }
   
   .edu img{
     float: left;
-    margin-right: 80px;
+    margin-right: 30px;
     height: auto;
     width: 200px;
   }
@@ -301,13 +302,15 @@ table {
   .edu .bu {
     align-items: left;
     font-size: 20px;
-    padding: 15px;
+    padding: 8px;
   }
 
   .edu .bu h2{
     font-size: 30px;
     font-family: 'Cormorant Garamond', serif;
     float: left;
+    color:#777;
+    align-items: center;
   }
 
   .date{
@@ -323,9 +326,11 @@ table {
   }
 
   .edu table{
-    float:right;
+    align-items: center;
     width: 100%;
     border: transparent;
+    text-align: left;
+    vertical-align: top;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   }
 
@@ -390,6 +395,62 @@ table {
     color: black;
 }
 
+.experience{
+  margin: 40px 20px;
+  padding-top: 16px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;    
+}
+
+.experience h3{
+  align-items: left;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30px;
+  color:#777;
+}
+.experience table{
+  align-items: center;
+  width: 100%;
+  border: transparent;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.experience img{
+  align-items: center;
+  width: auto;
+  height: 100px;
+}
+.experience tr{
+  background-color: transparent;
+  border-bottom: 1px solid #ccc;
+}
+
+.experience th{
+  padding: 20px;
+  font-weight: normal;
+  text-align: left;
+}
+
+.experience td{
+  padding: 20px;
+  font-size: 18px;
+  vertical-align: top;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.experience a{
+  text-decoration: underline;
+  color: black!important;
+}
+
+.experience a:visited{
+  color:inherit;
+}
+
+.experience a.active {
+  background-color: transparent;
+  color: black;
+}
 .projects{
   margin: 40px 20px;
 }
