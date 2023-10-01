@@ -133,6 +133,11 @@
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-size: 30px;
   }
+
+  .container a{
+    color: inherit;
+    text-decoration: none;
+ }
   
   .container a:visited{
      color: inherit;
@@ -221,6 +226,11 @@
   float: left;
   padding-left: 8%;
   vertical-align:top;
+}
+
+.about-content a{
+  color: inherit;
+  text-decoration: none;
 }
 
 .about-content a:visited{
