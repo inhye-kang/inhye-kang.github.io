@@ -16,44 +16,41 @@
 
 </head> 
 
+</body>
+    <!-- sidebar navigation -->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="education.html">EDUCATION</a>
+        <a href="experience.html">EXPERIENCE</a>
+        <a href="projects.html">PROJECTS</a>
+        <a href="honors.html">HONORS</a>
+        <a href="#">CONTACT</a>
+    </div>
 
-<body>
-
-<!-- sidebar navigation -->
-<div id="mySidebar" class="sidebar">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-    <a href="education.html">EDUCATION</a>
-    <a href="experience.html">EXPERIENCE</a>
-    <a href="projects.html">PROJECTS</a>
-    <a href="honors.html">HONORS</a>
-    <a href="#">CONTACT</a>
-</div>
-
-<!-- header with sidenav and home buttons-->
-<header class="front">
-    <div id="topnav">
+    <!-- header with sidenav and home buttons-->
+    
+     <div id="topnav">
         <a class="active" href="index.html">INHYE KANG</a>
         <button class="openbtn" onclick="openNav()">☰</button>
     </div>
 
-</header>
-
-<div class="content">
+    <div class="container">
         <!-- full start up page -->
-    <video autoplay muted loop id="m8yVideo">
-        <!--replace video with ver. without watermark-->
-        <source src="assets/butt2.mov" type="video/mp4">
-    </video>
-    <div class="full-height">
-        <a href="#about" class="inhye">INHYE</a>
+
+        <p id="welcome1"></p>
+        <p id="welcome2"></p>
+        <p id="welcome3"></p>
+        <p id="welcome4"></p>
+
+        <section id="section01" class="demo">
+            <a href="#about"><span></span><img src="assets/down-arrow.png"></a>
+        </section>
     </div>
-</body>
-        <div id="about" class="about-content">
-            <img alt="Photo of me in Mexico" src="assets/mexico.jpg">
-            <p>Thanks for visiting my portfolio website! I am studying computer science at Boston University, and I am hoping to concentrate in Artificial Intelligence. My interests include software engineering and machine learning, and I love to sail, lift, and play with my cats, Bailey and Michaeljackson in my free time. Feel free to reach out anytime, and a copy of my most recently updated resume can be found <a href="assets/InhyeKangResumeCopy.pdf" target="_blank">here</a>.</p>
-        </div>
+    <div id="about" class="about-content">
+        <img alt="Photo of me in Mexico" src="assets/temp.JPG">
+        <p>My name is Inhye Kang, and I am a 3rd year computer science at Boston University. I am currently looking for a software engineering internship for summer 2024. You can find my work experience, education history, projects, and honors through the navigation menu on the top right corner. Please feel free to reach out any time, and a copy of my most recently updated resume can be found <a href="assets/InhyeKangResume2023.pdf" target="_blank">here</a>.</p>
     </div>
-</div>
+
     <div class="footer">
         <p class="closing">Inhye Kang 2023</p>
         <a class="email" href = "mailto: inhye@bu.edu">inhye@bu.edu</a>
@@ -64,7 +61,74 @@
         </p>
         <a href="#" class="top">INHYE</a>
     </div>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 
+    <script>
+        var i = 0;
+        var txt1 = 'Thanks for visiting my website.';
+        var txt2 = 'You can scroll down to learn more about who I am,';
+        var txt3 = 'or use the navigation menu on the top right corner.';
+        var txt4 = 'You can also click ';
+        var linkText = 'here';
+        var afterText = ' for a copy of my resume.';
+        var linkInserted = false;
+        var speed = 20;
+
+        function typeWriter1() {
+            if (i < txt1.length) {
+                document.getElementById("welcome1").innerHTML += txt1.charAt(i);
+                i++;
+                setTimeout(typeWriter1, speed);
+            } else {
+                i = 0; // Reset the counter
+                typeWriter2(); // Call the second function
+            }
+        }
+
+        function typeWriter2() {
+            if (i < txt2.length) {
+                document.getElementById("welcome2").innerHTML += txt2.charAt(i);
+                i++;
+                setTimeout(typeWriter2, speed);
+            } else {
+                i = 0; // Reset the counter
+                typeWriter3(); 
+            }
+        }
+
+        function typeWriter3() {
+            if (i < txt3.length) {
+                document.getElementById("welcome3").innerHTML += txt3.charAt(i);
+                i++;
+                setTimeout(typeWriter3, speed);
+            } else {
+                i = 0; // Reset the counter
+                typeWriter4(); 
+            }
+        }
+
+        function typeWriter4() {
+            if (i < txt4.length && !linkInserted) {
+                document.getElementById("welcome4").innerHTML += txt4.charAt(i);
+                i++;
+                setTimeout(typeWriter4, speed);
+            } else if (!linkInserted) {
+                document.getElementById("welcome4").innerHTML += `<a href="assets/InhyeKangResume2023.pdf" target="_blank">${linkText}</a>`;
+                linkInserted = true;
+                i = 0;
+                setTimeout(typeWriter4, speed);
+            } else if (linkInserted && i < afterText.length) {
+                document.getElementById("welcome4").innerHTML += afterText.charAt(i);
+                i++;
+                setTimeout(typeWriter4, speed);
+            } else {
+                i = 0;
+            }
+        }
+
+        window.onload = typeWriter1;
+        
+    </script>
 </body>
 
 <script>

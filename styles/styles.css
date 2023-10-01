@@ -15,6 +15,14 @@
     padding: 0;
     scroll-behavior: smooth;
   }
+
+  #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: auto;
+  }
   
   
   /* sidebar menu */
@@ -101,15 +109,7 @@
       .sidebar a {font-size: 18px;}
   }
 
-  #myVideo {
-    position: relative;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: 900;
-    padding: 0px;
-  }
+  
 
   .sticky{
     position: fixed;
@@ -117,78 +117,122 @@
     width: 100%;
   }
 
-  /*
-  .content{
-    padding: 16px;
-  } */
-
-  .sticky + .content {
-    padding-top: 60px;
+  .container {
+    height: 50%;
+    position: relative;
+    padding-top: 30%;
+    color:rgb(43, 36, 36);
+    background-color: #FFFFFF;
+    align-items: center;
+    justify-content: left;
+    justify-items: center;
+    padding-left: 5%;
+    padding-right: 10%;
+    font-size: 20px;
+    display: block;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size: 30px;
   }
-
-  .inhye{
-      font-size: calc(81px + (513 - 81) * ((100vw - var(--minViewportSize) * 1px) / (var(--maxViewportSize) - var(--minViewportSize))));
-      font-family: 'Raleway', sans-serif;      
-      text-decoration: none;
-      text-align: center;
-      letter-spacing: 0em;
-      vertical-align: bottom!important;
-      bottom: 0;
-      width: 100%;
-      position: absolute;
-      z-index: 925;
-      color: black;
-  }
-
-  .inhye:visited{
+  
+  .container a:visited{
      color: inherit;
      text-decoration: none;
   }
+
+  @import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,400);
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .demo {
+    position: absolute;
+    bottom: 10%;
+    align-items: center;
+    z-index: 2;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    color: #000;
+    font : normal 400 20px/1 'Josefin Sans', sans-serif;
+    letter-spacing: .1em;
+    text-decoration: none;
+    transition: opacity .3s;
+  }
+  .demo a:hover {
+    opacity: .5;
+  }
+  
+  .demo img{
+    width: 10px;
+    height: auto;
+    position: relative;
+    align-items:center;
+  }
+  
+  #section01 a {
+    padding-top: 0px;
+  }
+  #section01 a span {
+    position: absolute;
+    top: 0;
+    left: 45%;
+    width: 24px;
+    height: 24px;
+    border-left: 1px solid #080808;
+    border-bottom: 1px solid #080808;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    box-sizing: border-box;
+  }
+  html, body {
+    height: 100%;
+  }
+  #section01 {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    align-items: center;
+  }
+  section::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 80%;
+  }
   
 #about {
-  margin: 0;
+  background-color: #FFFFFF;
   height:100%;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;;
-  font-size: 15px;
+  font-size: 20px;
   position: relative;
-  background-color: white;
-  padding-top: 10%;
-  padding-bottom: 20%;
+  align-items: center;
+  vertical-align: text-top;
 }
 
 .about-content{
+  position:absolute;
   height: 100%;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
-  gap: 30px;
-}
-
-.about-content img{
-  grid-column: 1;
-  width: 200px;
-  height: auto;
+  display: flex;
 }
 
 .about-content p{
-  grid-column: 2;
+  float: left;
+  padding-left: 8%;
+  vertical-align:top;
 }
 
-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  td, th {
-    border: transparent;
-    text-align: left;
-    padding: 8px;
-  }
-  
-  tr{
-    background-color: #bab2b2;
-  }
+.about-content a:visited{
+  color: inherit;
+  text-decoration: none;
+}
+
+.about-content img{
+  width: 30%;
+  height: auto;
+  float: left;
+}
 
 .footer .closing{
     padding-left: 3%;
@@ -267,29 +311,17 @@ table {
       /* Responsive styling for the intro section (padding, hiding/showing images) */
       #about
       {
-          padding-left: 20%;
-          padding-right: 20%;
-      }
-      #about #sailing
-      {
-          display: none;
+          padding-left: 10%;
+          padding-right: 10%;
       }
   }
   
-  @media screen and (max-width: 720px)
-  {
-      /* Continued responsive styling for the intro section (padding, hiding/showing images) */
-      #about #sailing
-      {
-          display: none;
-      }
-  }
 
   .edu{
     margin: 40px 20px;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     gap: 30px;
-    padding-top: 16px;
+    padding-top: 3%;
   }
   
   .edu img{
@@ -305,14 +337,6 @@ table {
     padding: 8px;
   }
 
-  .edu .bu h2{
-    font-size: 30px;
-    font-family: 'Cormorant Garamond', serif;
-    float: left;
-    color:#777;
-    align-items: center;
-  }
-
   .date{
     align-items: left;
     font-size: 15px;
@@ -320,13 +344,14 @@ table {
   }
 
   .edu h2{
-    align-items: left;
+    vertical-align: text-bottom;
     font-size: 30px;
     font-family: 'Cormorant Garamond', serif;
   }
 
   .edu table{
     align-items: center;
+    padding-top: 3%;
     width: 100%;
     border: transparent;
     text-align: left;

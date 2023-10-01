@@ -22,8 +22,7 @@ function openPage(pageName,elmnt,color) {
     elmnt.style.backgroundColor = color;
 }
     
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
+
 
 //top nav sticky
 window.onscroll = function() {myFunction()};
@@ -38,3 +37,10 @@ function myFunction() {
     topnav.classList.remove("sticky");
     }
 }
+
+$(function() {
+    $('a[href*=#]').on('click', function(e) {
+      e.preventDefault();
+      $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+    });
+  });
