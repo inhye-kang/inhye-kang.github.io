@@ -136,12 +136,12 @@
 
   .container a{
     color: inherit;
-    text-decoration: none;
+    text-decoration: underline;
  }
   
   .container a:visited{
      color: inherit;
-     text-decoration: none;
+     text-decoration: underline;
   }
 
   @import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,400);
@@ -230,12 +230,12 @@
 
 .about-content a{
   color: inherit;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .about-content a:visited{
   color: inherit;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .about-content img{
